@@ -13,6 +13,7 @@ namespace MvcApplication1.Controllers
 
         public ActionResult Index()
         {
+            ViewBag.Words = "a b c";
             return View();
         }
 
