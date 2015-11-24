@@ -14,6 +14,7 @@ namespace MvcApplication1.Controllers
         public ActionResult Index()
         {
             ViewBag.Numbers = "123";
+            ViewBag.Words = "a b c";
             return View();
         }
 
