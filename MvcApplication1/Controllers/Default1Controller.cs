@@ -13,6 +13,7 @@ namespace MvcApplication1.Controllers
 
         public ActionResult Index()
         {
+            ViewBag.Numbers = "123";
             return View();
         }
 
