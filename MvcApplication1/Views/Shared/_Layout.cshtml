@@ -8,7 +8,21 @@
     @Scripts.Render("~/bundles/modernizr")
 </head>
 <body>
+    @{  Html.RenderAction("MiniLogin"); }
+
+    <div>
+        <h2>Brand</h2>
+    </div>
+
+    @{ Html.RenderAction("Menu"); }
+
     @RenderBody()
+
+    @{ Html.RenderAction("index", "Testimonials"); }
+
+    <footer>
+        @@Footer
+    </footer>
 
     @Scripts.Render("~/bundles/jquery")
     @RenderSection("scripts", required: false)

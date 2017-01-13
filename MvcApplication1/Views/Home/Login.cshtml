@@ -1,0 +1,17 @@
+﻿@{
+    ViewBag.Title = "Login";
+}
+
+<h2>Login</h2>
+
+@using (Html.BeginForm())
+{
+    @Html.Label("Email")
+    @Html.TextBox("Email", "", new { @class = "form-control" })
+    @Html.Label("Password")
+    @Html.TextBox("Password", "", new { @class = "form-control", password = "true" })
+    @Html.CheckBox("RememberMe", false)
+    <button>Log in</button>
+}
+
+<div>Register</div>

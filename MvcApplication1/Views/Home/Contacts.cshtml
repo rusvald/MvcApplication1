@@ -1,0 +1,25 @@
+﻿@model MvcApplication1.Models.ContactsVModel
+@{
+    ViewBag.Title = "Contacts";
+}
+
+<h2>Contacts</h2>
+
+@using (Html.BeginForm())
+{
+    if(Model.ErrorMsg)
+    {
+        <div>
+            @Model.ErrorText
+        </div>
+    }
+    @Html.LabelFor(m => m.Name)
+    @Html.EditorFor(m => m.Name)
+    @Html.LabelFor(m => m.Email)
+    @Html.EditorFor(m => m.Email)
+    @Html.LabelFor(m => m.Subject)
+    @Html.EditorFor(m => m.Subject)
+    @Html.LabelFor(m => m.Message)
+    @Html.EditorFor(m => m.Message)
+    <button>Send message</button>
+}

@@ -1,0 +1,24 @@
+﻿@model MvcApplication1.Models.NavigationVModel
+
+@if (Model.SubMenu.Any())
+{
+    <ul>
+        @foreach (var m in Model.SubMenu)
+        {
+            if (m.SubMenu != null)
+            {
+                <li><a href="@m.Url">@m.Name</a></li>
+                <ul>
+                    @foreach (var sm in m.SubMenu)
+                    {
+                        <li><a href="@sm.Url">@sm.Name</a></li>
+                    }
+                </ul>
+            }
+            else
+            {
+                <li><a href="@m.Url">@m.Name</a></li>
+            }
+        }
+    </ul>
+}

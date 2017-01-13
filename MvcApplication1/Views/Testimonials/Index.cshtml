@@ -1,0 +1,16 @@
+﻿@model MvcApplication1.Models.TestimonialsVModel
+
+@if(Model != null && Model.Testimonials.Any())
+{
+    <h1>Testimonials</h1>
+    <div>
+        @foreach(var t in Model.Testimonials)
+        {
+            <div>
+                <h3>@t.Name</h3>
+                <div>@t.Subject</div>
+            </div>
+        }
+    </div>
+
+}

@@ -1,0 +1,20 @@
+﻿@model MvcApplication1.Models.UserVModel
+
+@if (Model == null)
+{
+    <div><a href="/home/login">Login</a></div>
+}
+else
+{
+    <div><a href="#">Hello, @Model.UserName</a></div>
+
+    <div id="modal_window">
+        <div>@Model.UserName</div>
+        <div><a href="/home/logout">Logout</a></div>
+        <div><span>Cash: </span>@("$" + Model.Cash)</div>
+        <div><span>Transfers: </span>$0.00</div>
+        <div><a href="#">Wallet manager</a></div>
+        <div><a href="#">Go to profile</a></div>
+        <div>Hello, @Model.UserName</div>
+    </div>
+}
